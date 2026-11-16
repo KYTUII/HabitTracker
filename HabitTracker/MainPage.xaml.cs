@@ -19,10 +19,10 @@ public partial class MainPage : ContentPage
     {
         string[] titles =
         {
-            "Изучить XAML",
-            "Выполнить практическую работу",
-            "Повторить C#",
-            "Подготовить проект"
+            "Задача 1",
+            "Задача 2",
+            "Задача 3",
+            "Задача 4"
         };
 
         foreach (var title in titles)
@@ -37,7 +37,7 @@ public partial class MainPage : ContentPage
     // Обновление списка с учётом переключателя
     private void RefreshList()
     {
-        TasksView.ItemsSource = HideCompletedSwitch.IsToggled
+        HabitView.ItemsSource = HideCompletedSwitch.IsToggled
             ? _tasks.Where(t => !t.IsCompleted).ToList()
             : _tasks.ToList();
     }
